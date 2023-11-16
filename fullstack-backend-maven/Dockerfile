@@ -4,7 +4,7 @@ FROM maven:3.6.3 AS maven
 WORKDIR /app
 COPY . .
 # Compile and package the application to an executable JAR
-RUN mvn package
+CMD mvn package
 
 
 
