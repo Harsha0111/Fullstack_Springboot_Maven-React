@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Fullstack_Springboot_Maven+React.iml" filepath="$PROJECT_DIR$/.idea/Fullstack_Springboot_Maven+React.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fullstack-backend-maven/fullstack-backend/fullstack-backend.iml" filepath="$PROJECT_DIR$/fullstack-backend-maven/fullstack-backend/fullstack-backend.iml" />
     </modules>
   </component>
 </project>
