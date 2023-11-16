@@ -1,15 +1,7 @@
-# AS <NAME> to name this stage as maven
-FROM maven:3.6.3 AS maven
-
-WORKDIR /app
-COPY . .
-# Compile and package the application to an executable JAR
-CMD mvn package
-
-
-
-
-
-# Exposing port 8080
+FROM openjdk:17
+VOLUME /tmp
 EXPOSE 8081
+ARG JAR_FILE=target/spring-boot-docker.jar
+ADD ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
 
