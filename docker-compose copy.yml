@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  web:
+    build: ./fullstack-frontend-react
+    container_name: react:test1
+    ports: 
+      - '3000:3000'
+
+    stdin_open: true
+    tty: true
+
+  # api:
+  #   build: ./fullstack-backend-maven
+  #   ports: 
+  #     - 8081:8081
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+

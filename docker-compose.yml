@@ -23,7 +23,13 @@ services:
       - 3306:3306
     volumes:
       - mysqldb:/var/lib/mysql
-  # api:
+   
+
+volumes:
+  mysqldb:
+
+
+# api:
   #   container_name: api
   #   image: spring-boot-api-tutorial-img
   #   build:
@@ -33,10 +39,7 @@ services:
   #     - mysqldb
   #   ports:
   #     - 8081:8081
-  #   restart: always   
-
-volumes:
-  mysqldb:
+  #   restart: always  
 
 
 
