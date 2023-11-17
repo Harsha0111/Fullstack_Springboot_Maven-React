@@ -1,20 +1,46 @@
+
 version: '3.8'
 services:
   web:
     build: ./fullstack-frontend-react
-    container_name: react:test1
     ports: 
-      - '3000:3000'
+      - 3000:3000
 
-    stdin_open: true
-    tty: true
+  api:
+    build: ./fullstack-backend-maven
+    ports: 
+      - 8081:8081
+  
+  mysqldb:
+    container_name: mysqldb
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=root
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+    restart: always
+    ports:
+      - 3306:3306
+    volumes:
+      - mysqldb:/var/lib/mysql
+   
 
-  # api:
-  #   build: ./fullstack-backend-maven
-  #   ports: 
+volumes:
+  mysqldb:
+
+
+# api:
+  #   container_name: api
+  #   image: spring-boot-api-tutorial-img
+  #   build:
+  #     context: ./
+  #     dockerfile: Dockerfile
+  #   depends_on:
+  #     - mysqldb
+  #   ports:
   #     - 8081:8081
-  
-  
+  #   restart: always 
 
 
 
