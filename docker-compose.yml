@@ -6,7 +6,7 @@ version: '3.8'
 services:
   web:
     build: ./fullstack-frontend-react
-    container_name: react:test
+    container_name: reacttt
     ports: 
       - '3000:3000'
 
